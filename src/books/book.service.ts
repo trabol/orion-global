@@ -27,6 +27,14 @@ export class BookService {
     if (existingTitle) {
       throw new ConflictException(`El titulo con el nombre "${dto.title}" ya existe`);
     }
+    //validar que los autores existan
+    for (const authorId of dto.authorIds) {
+      const authors = await this.authorRepo.findByIds([new ObjectId(authorId)]);
+
+      if (!authors.length) {
+        throw new ConflictException(`El autor con id ${authorId} no existen`);
+      }
+    }
     const book = this.bookRepo.create({
       ...dto,
       authorIds: dto.authorIds.map((id) => new ObjectId(id)),
