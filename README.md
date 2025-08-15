@@ -10,7 +10,7 @@ API RESTful construida con **NestJS**, **MongoDB** y **TypeORM**, que permite ge
 - **TypeORM**: ORM para interacción con MongoDB.
 - **MongoDB**: Base de datos NoSQL.
 - **Swagger**: Documentación automática de la API.
-- **Docker**: Contenedores para el backend y la base de datos.
+
 
 ---
 
