@@ -87,7 +87,7 @@ http://localhost:8000/api
 ```bash
 POST /books
 {
-  "title": "El Principito",
+  "title": "El Principito 2",
   "chapters": 27,
   "pages": 100,
   "authorIds": ["64f07ac7d5b54c1e0ce3eb20"]
